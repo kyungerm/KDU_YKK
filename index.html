@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경동대학교, 보건교육사 양성기관 도약을 위한 전략 제안</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <!-- Firebase SDK for the "Support" widget -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-check.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #FF8C42;
+            --color-secondary: #FFAA5B;
+            --color-dark: #4B4453;
+            --color-light: #B4A6AB;
+            --color-white: #FFFFFF;
+            --color-background: #F8F9FA;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--color-background);
+        }
+        .report-header {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+        .section {
+            padding: 3rem 2.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .section-title {
+            color: var(--color-dark);
+            font-weight: 900;
+            font-size: 2.25rem;
+            text-align: center;
+        }
+        .section-subtitle {
+            color: var(--color-secondary);
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        .kpi-card h3 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--color-dark);
+        }
+        .content-card {
+             background-color: var(--color-white);
+             padding: 2rem;
+             border-radius: 0.5rem;
+             border: 1px solid #e5e7eb;
+             height: 100%;
+        }
+        .custom-table th {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .custom-table td {
+             padding: 0.75rem 1rem;
+             border-bottom: 1px solid #f3f4f6;
+             vertical-align: middle;
+             font-size: 0.9rem;
+        }
+        .custom-table .category-cell {
+            font-weight: 700;
+            text-align: center;
+            color: var(--color-primary);
+            background-color: #FFF3E0;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="max-w-6xl mx-auto my-8 bg-white shadow-lg">
+        <header class="report-header p-8">
+            <h1 class="text-3xl font-bold text-center">경동대학교, 보건교육사 양성기관 도약을 위한 전략 제안</h1>
+        </header>
+
+        <main>
+            <section id="intro" class="section">
+                <h2 class="section-title">왜 지금 보건교육사인가?</h2>
+                <p class="section-subtitle mb-12">학생의 미래, 학과의 경쟁력을 한 단계 높일 최적의 전략</p>
+                <div class="max-w-4xl mx-auto text-center text-lg text-gray-700 mb-12 space-y-4">
+                    <p>
+                        국민건강증진법에 근거한 '보건교육사'는 임상을 넘어 지역사회, 산업체, 국가기관에서 국민 건강을 책임지는 핵심 전문가입니다.
+                    </p>
+                    <p>
+                        전국 수많은 간호학과가 유사과목 심사 절차를 거쳐 이 제도를 운영하며 학생들의 진로를 다각화하고 학과 경쟁력을 강화하고 있습니다. 이제 경동대학교가 이 흐름을 선도할 때입니다.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="kpi-card content-card">
+                        <h3>70<span class="text-3xl align-top">+</span></h3>
+                        <p class="text-xl font-semibold text-gray-700 mt-2">보건교육사 취득 지원 대학</p>
+                        <p class="text-gray-500 mt-1">전국 4년제 및 전문대학 다수가 이미 심사 완료 후 학생들을 지원하고 있습니다.</p>
+                    </div>
+                    <div class="kpi-card content-card">
+                        <h3>5+2</h3>
+                        <p class="text-xl font-semibold text-gray-700 mt-2">3급 자격 최소 이수과목</p>
+                        <p class="text-gray-500 mt-1">필수 5과목, 선택 2과목 이수 시 응시 가능.<br>유사과목 심사 승인 시, 본교 교육과정으로 충족 가능합니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="analysis" class="section bg-gray-50">
+                <h2 class="section-title">전국 간호학과 현황 분석</h2>
+                <p class="section-subtitle mb-12">보건교육사 지원은 이제 '표준', 경동대학교의 기회입니다.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                    <div class="content-card">
+                        <h3 class="text-xl font-bold text-center mb-4 text-gray-800">전국 간호학과 중 보건교육사 3급 응시 자격 충족 대학</h3>
+                        <div class="h-80">
+                            <canvas id="universityTypeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3 class="text-xl font-bold text-center mb-6 text-gray-800">타대학 우수 지원 사례</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <img src="https://placehold.co/48x48/003876/FFFFFF?text=Y" alt="연세대 로고" class="rounded-full flex-shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/48x48/cccccc/FFFFFF?text=Y';">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">연세대학교, 투명한 정보 공개</h4>
+                                    <p class="text-sm text-gray-600">인정 과목 전체를 홈페이지에 공시하여,<br>학생들이 명확한 계획을 세울 수 있도록 적극 지원합니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                               <img src="https://placehold.co/48x48/002F6C/FFFFFF?text=C" alt="충남대 로고" class="rounded-full flex-shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/48x48/cccccc/FFFFFF?text=C';">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">충남대학교, 실질적 성과 창출</h4>
+                                    <p class="text-sm text-gray-600">국가시험 수석 합격자를 배출하는 등 강력한 교육 프로그램을 운영,<br>자격 취득을 넘어 전문성 함양을 증명합니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                               <img src="https://placehold.co/48x48/00A79E/FFFFFF?text=H" alt="한림대 로고" class="rounded-full flex-shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/48x48/cccccc/FFFFFF?text=H';">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">한림대학교, 취업 연계 강화</h4>
+                                    <p class="text-sm text-gray-600">보건교육사 자격 취득을 주요 취업 지원 프로그램의 일환으로 삼고,<br>졸업생의 다양한 진로 개척을 적극 장려합니다.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                               <img src="https://placehold.co/48x48/004B8D/FFFFFF?text=G" alt="가천대 로고" class="rounded-full flex-shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/48x48/cccccc/FFFFFF?text=G';">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">가천대학교, 비교과 프로그램 운영</h4>
+                                    <p class="text-sm text-gray-600">정규 교과과정 외 자격증 취득을 위한 특강 및 스터디 그룹을 운영하며<br>학생들의 합격률을 높이는 데 집중합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="strategy" class="section">
+                <h2 class="section-title">경쟁 대학의 활용 및 홍보 전략</h2>
+                <p class="section-subtitle mb-12">단순 자격 취득을 넘어 학과 브랜드 가치를 높이는 방법,<br>타 대학교는 이렇게 이미 활용하고 있습니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="content-card text-center transition hover:shadow-xl hover:-translate-y-1">
+                        <div class="text-5xl mb-4">🎓</div>
+                        <h3 class="text-lg font-bold text-dark mb-2">학과 경쟁력으로 부각</h3>
+                        <p class="text-gray-600 mt-2">'취득 가능 자격증' 목록에 '보건교육사'를 간호사 면허와 함께 명시,<br>다양한 진로 가능성을 제시하여 신입생 유치에 활용합니다.</p>
+                    </div>
+                    <div class="content-card text-center transition hover:shadow-xl hover:-translate-y-1">
+                        <div class="text-5xl mb-4">💼</div>
+                        <h3 class="text-lg font-bold text-dark mb-2">구체적인 진로와 연계</h3>
+                        <p class="text-gray-600 mt-2">'졸업 후 진로'에 보건소, 공공기관, 기업체 등 구체적 활동 무대를 제시하여<br>학생들의 경력 설계와 학습 동기를 자극합니다.</p>
+                    </div>
+                    <div class="content-card text-center transition hover:shadow-xl hover:-translate-y-1">
+                        <div class="text-5xl mb-4">📈</div>
+                        <h3 class="text-lg font-bold text-dark mb-2">적극적 지원 프로그램 운영</h3>
+                        <p class="text-gray-600 mt-2">정규과정 외 별도 특강, 스터디 그룹 지원 등을 통해<br>높은 합격률을 홍보하며 교육의 질적 우수성을 과시합니다.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section bg-gray-50">
+                <h2 class="section-title">국가고시 수석 배출의 홍보 효과</h2>
+                <p class="section-subtitle mb-12">단 하나의 뉴스가 대학의 위상을 바꿉니다.</p>
+                 <div class="content-card max-w-4xl mx-auto">
+                    <blockquote class="border-l-4 border-primary pl-6">
+                        <p class="text-lg font-semibold text-gray-800">"충남대 간호학과 졸업생, 보건교육사 3급 국가시험 전국 수석!"</p>
+                        <p class="text-md text-gray-600 mt-2">- 202X년 XX일자, 주요 언론사 보도 내용 中 -</p>
+                    </blockquote>
+                    <div class="mt-6 text-gray-700 space-y-2">
+                        <p>위 헤드라인은 단순한 상상이 아닙니다. 타 대학의 사례처럼, 본교 역시 자격취득 지원을 통해 놀라운 성과를 만들어낼 수 있습니다.</p>
+                        <p>이는 ▲우수 신입생 유치 경쟁에서의 우위 확보 ▲재학생들의 자긍심 고취 ▲대학 브랜드 이미지의 수직 상승으로 직접 이어집니다.</p>
+                        <p class="font-bold text-dark mt-4">"경동대학교, 보건교육사 3급 전국 수석배출 쾌거!"<br>이것이 우리가 만들어갈 미래의 모습이 될 수 있습니다.</p>
+                    </div>
+                </div>
+            </section>
+            
+             <section class="section">
+                <h2 class="section-title">ROI 분석, 최소 비용, 최대 효과</h2>
+                <p class="section-subtitle mb-12">가장 효율적인 대학 발전 전략입니다.</p>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="content-card border-red-200">
+                        <h3 class="font-bold text-xl text-center mb-4 text-red-600">비용 (Cost)</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <span class="font-semibold">유사과목 심사 수수료</span><br>
+                                <span class="text-sm text-gray-500">(과목당 3만원)</span>
+                            </li>
+                            <li>
+                                <span class="font-semibold">약간의 행정 인력 투입</span><br>
+                                <span class="text-sm text-gray-500">(기존 인력으로 충분히 처리 가능)</span>
+                            </li>
+                        </ul>
+                    </div>
+                     <div class="content-card border-green-200">
+                        <h3 class="font-bold text-xl text-center mb-4 text-green-600">기대 효과 (Return)</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <span class="font-semibold">대학 브랜드 가치 상승</span><br>
+                                <span class="text-sm text-gray-500">(국가자격 양성기관으로서의 위상)</span>
+                            </li>
+                            <li>
+                                <span class="font-semibold">우수 신입생 유치 용이</span><br>
+                                <span class="text-sm text-gray-500">(타 대학과의 확실한 차별점)</span>
+                            </li>
+                            <li>
+                                <span class="font-semibold">재학생 만족도 및 자부심 향상</span><br>
+                                <span class="text-sm text-gray-500">(진로 다각화 및 동기 부여)</span>
+                            </li>
+                             <li>
+                                <span class="font-semibold">언론 홍보 효과 극대화</span><br>
+                                <span class="text-sm text-gray-500">(국시 합격률, 수석 배출 등)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section bg-gray-50">
+                <h2 class="section-title">단계별 추진 전략, '보건교육사반' 신설</h2>
+                <p class="section-subtitle mb-12">체계적인 관리로 홍보와 교육의 질을 동시에 확보합니다.</p>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="content-card flex items-start gap-6">
+                        <div class="flex-shrink-0 text-5xl">🌱</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark">1단계, 시범 운영 (금년도)</h3>
+                            <p class="text-gray-600 mt-2">
+                                금년도 '보건교육' 과목 이수 예정자(2025.06.21. 시행) 대상 설문조사 결과,
+                                <span class="font-bold">40명 중 21명(52.5%)</span>이 응시 자격 충족 시 시험에 응시할 의향이 있음을 확인했습니다.
+                                이 학생들을 대상으로 '보건교육사반 1기'를 시범 운영하여, 내년도 정식 신설을 위한 데이터를 확보하겠습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content-card flex items-start gap-6">
+                         <div class="flex-shrink-0 text-5xl">🏫</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark">2단계, '보건교육사반' 정식 신설</h3>
+                            <p class="text-gray-600 mt-2">기존 교직반, 국제반과 같이 '보건교육사반'을 별도로 신설하여 체계적으로 관리합니다.<br>전담 지도교수 배정, 특강, 스터디 그룹 지원 등을 통해 교육의 질과 합격률을 극대화합니다.</p>
+                        </div>
+                    </div>
+                     <div class="content-card flex items-start gap-6">
+                         <div class="flex-shrink-0 text-5xl">🏆</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark">3단계, 성과 창출 및 홍보</h3>
+                            <p class="text-gray-600 mt-2">높은 국시 합격률, 수석 배출 등 가시적인 성과를 입시 홍보와 연계하여,<br>'보건교육 분야의 명문'이라는 학과 브랜드를 구축합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="kyungdong-plan" class="section">
+                <h2 class="section-title">경동대학교, 이렇게 준비되었습니다</h2>
+                <p class="section-subtitle mb-12">우수한 교육과정, 이미 충분한 잠재력을 갖추고 있습니다.</p>
+                <div class="content-card">
+                    <h3 class="text-xl font-bold text-center mb-4 text-gray-800">보건교육사 3급 유사과목 심사 신청 제안 목록 (추정)</h3>
+                    <div class="text-sm text-center text-gray-500 mb-6 space-y-2">
+                        <p>타 대학 인정 사례와 본교 교육과정(2019-2025)을 비교 분석한 핵심 교과목 목록입니다.</p>
+                        <p>심사 시, 관련성 있는 모든 과목을 제출하여 인정률을 극대화하는 전략이 필요합니다.</p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full custom-table">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>법정 교과목</th>
+                                    <th>경동대학교 개설 교과목 (제안)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="category-cell" rowspan="6">필수</td><td>보건학</td><td class="text-left font-medium">지역사회간호학 I, II, III</td></tr>
+                                <tr><td>조사방법론</td><td class="text-left font-medium">간호연구 / 간호연구방법</td></tr>
+                                <tr><td>보건의료법규</td><td class="text-left font-medium">보건의료법규 / 보건의약관계법규</td></tr>
+                                <tr><td>보건의사소통</td><td class="text-left font-medium">인간관계 및 의사소통 / 의사소통론</td></tr>
+                                <tr><td>보건사업관리</td><td class="text-left font-medium">간호관리학 I, II</td></tr>
+                                <tr><td>보건교육실습</td><td class="text-left font-medium">지역사회간호학실습</td></tr>
+                                <tr><td class="category-cell" rowspan="8">선택</td><td>해부생리</td><td class="text-left font-medium">인체구조와 기능 I, II / 기초인체해부학 / 기초인체생리학</td></tr>
+                                <tr><td>인간발달론</td><td class="text-left font-medium">인간성장과 발달</td></tr>
+                                <tr><td>보건통계</td><td class="text-left font-medium">보건통계 / 의료통계</td></tr>
+                                <tr><td>정신보건</td><td class="text-left font-medium">정신건강간호학 I, II / 통합정신간호</td></tr>
+                                <tr><td>아동보건</td><td class="text-left font-medium">아동건강간호학 I, II</td></tr>
+                                <tr><td>노인보건</td><td class="text-left font-medium">노인간호학</td></tr>
+                                <tr><td>보건윤리</td><td class="text-left font-medium">생명윤리</td></tr>
+                                <tr><td>보건정보</td><td class="text-left font-medium">간호정보학</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="conclusion" class="section" style="background-color: var(--color-dark);">
+                <h2 class="section-title" style="color: var(--color-white);">결론 및 제언, 미래를 위한 최소한의 투자</h2>
+                <p class="section-subtitle" style="color: var(--color-secondary); margin-bottom: 3rem;">총장님의 결단이 경동대학교 간호학과의 미래를 바꿉니다.</p>
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="text-lg text-gray-200 leading-relaxed mb-8 space-y-4">
+                        <p>
+                            '보건교육사 3급' 자격 취득 지원은 더 이상 특별한 프로그램이 아닌, 전국 간호학과의 표준적인 학생 지원 제도입니다.
+                        </p>
+                        <p>
+                            본교 간호학과의 우수한 교육과정은 최소한의 행정적 지원과 심사 수수료만으로 재학생과 졸업생 모두에게 새로운 국가자격 취득의 길을 열어줄 수 있습니다. 이는 '학생 성공'을 최우선으로 하는 우리 대학의 교육 이념을 실천하는 가장 확실한 방법 중 하나입니다.
+                        </p>
+                    </div>
+                    <div class="inline-block bg-white text-gray-800 rounded-lg p-6 shadow-lg">
+                        <p class="text-sm font-semibold text-gray-500">필요사항</p>
+                        <p class="text-2xl font-bold text-dark my-1">유사과목 심사 신청 승인</p>
+                        <p class="text-sm text-gray-600">(소요 비용: 과목당 3만원 심사 수수료)</p>
+                    </div>
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold text-white">강력히 제안합니다</h3>
+                        <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">
+                           경동대학교의 더 큰 도약을 위해 <span class="font-bold" style="color:var(--color-primary);">'간호학과 보건교육사 3급 유사과목 심사 추진'</span> 안건을 대학 본부 차원에서 공식 승인해주시고, 관련 절차 진행을 재가하여 주실 것을 제안합니다.
+                        </p>
+                         <div id="support-widget" class="mt-8">
+                             <div class="flex items-center justify-center gap-4">
+                                <button id="support-button" class="bg-primary text-white font-bold py-4 px-8 rounded-lg text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+                                    이 제안서를 지지합니다 (클릭!)
+                                </button>
+                                <div class="flex items-center gap-2 text-white">
+                                    <span class="text-2xl font-bold" id="support-count">0</span>
+                                    <span class="text-lg">명이 지지합니다.</span>
+                                </div>
+                             </div>
+                             <p class="text-xs text-gray-400 mt-3">*지지합니다 집계는 정확한 지지 파악을 위해 중복 참여가 제한되는 코드를 포함하고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-6 bg-gray-200">
+             <p class="text-sm text-gray-600">Copyright &copy; 2025. 2092092 김윤균. All Rights Reserved.</p>
+             <p class="text-sm text-gray-500 mt-1">이 사이트는 경동대학교의 발전을 위해 개발되었습니다.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const PALETTE = {
+                dark: '#4B4453',
+                primary: '#FF8C42',
+                secondary: '#FFAA5B',
+            };
+
+            const universityTypeCtx = document.getElementById('universityTypeChart').getContext('2d');
+            new Chart(universityTypeCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['4년제 대학', '전문대학'],
+                    datasets: [{
+                        label: '보건교육사 지원 대학 수 (추정)',
+                        data: [45, 25],
+                        backgroundColor: [PALETTE.dark, PALETTE.secondary],
+                        borderWidth: 1,
+                        borderRadius: 4,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: PALETTE.dark,
+                        }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+
+            // --- Support Widget Logic with Firebase ---
+            const firebaseConfig = {
+                apiKey: "AIzaSyAIU7S-GZVutnsH4yCh8Cd-Iqr71k7k6II",
+                authDomain: "kduykk-75163.firebaseapp.com",
+                databaseURL: "https://kduykk-75163-default-rtdb.firebaseio.com",
+                projectId: "kduykk-75163",
+                storageBucket: "kduykk-75163.appspot.com",
+                messagingSenderId: "959846976218",
+                appId: "1:959846976218:web:b805e5f966cf372db033e3",
+                measurementId: "G-2T8KYPR1CX"
+            };
+
+            // Initialize Firebase
+            if (typeof firebase !== 'undefined' && !firebase.apps.length) {
+                firebase.initializeApp(firebaseConfig);
+            }
+            const database = firebase.database();
+            
+            const supportButton = document.getElementById('support-button');
+            const supportCountSpan = document.getElementById('support-count');
+            const ALREADY_SUPPORTED_KEY = 'proposalSupported_kdu_hes_v6_final';
+            const counterRef = database.ref('proposal/supportCount');
+
+            // 1. Fetch the initial count and update the UI
+            counterRef.on('value', (snapshot) => {
+                const count = snapshot.val() || 0;
+                supportCountSpan.textContent = count;
+            }, (error) => {
+                console.error("Firebase read failed: " + error.code);
+            });
+
+            // 2. Check if the user has already voted in this browser
+            if (localStorage.getItem(ALREADY_SUPPORTED_KEY)) {
+                supportButton.disabled = true;
+                supportButton.textContent = '지지해 주셔서 감사합니다!';
+            }
+
+            // 3. Handle the button click
+            supportButton.addEventListener('click', () => {
+                if(localStorage.getItem(ALREADY_SUPPORTED_KEY)) return;
+
+                // Use a transaction to safely increment the counter
+                counterRef.transaction((currentCount) => {
+                    return (currentCount || 0) + 1;
+                }, (error, committed, snapshot) => {
+                    if (error) {
+                        console.error('Transaction failed abnormally!', error);
+                    } else if (committed) {
+                        console.log('Support count updated!');
+                        localStorage.setItem(ALREADY_SUPPORTED_KEY, 'true');
+                        supportButton.disabled = true;
+                        supportButton.textContent = '지지해 주셔서 감사합니다!';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
