@@ -406,8 +406,20 @@
             if (typeof firebase !== 'undefined' && !firebase.apps.length) {
                 firebase.initializeApp(firebaseConfig);
             }
-            const database = firebase.database();
             
+            // App Check 활성화 코드 (오류 발생 시에도 앱 중단 방지)
+            try {
+                const appCheck = firebase.appCheck();
+                appCheck.activate(
+                    '6LdJtWkrAAAAAN1KDtphZS61dHv6oDOFrncDv2AZ', // reCAPTCHA v3 site key
+                    true
+                );
+                console.log('Firebase App Check activated successfully.');
+            } catch (error) {
+                console.error('Firebase App Check activation failed. This may be due to domain/key mismatch. The support widget will still attempt to function without App Check.', error);
+            }
+
+            const database = firebase.database();
             const supportButton = document.getElementById('support-button');
             const supportCountSpan = document.getElementById('support-count');
             const ALREADY_SUPPORTED_KEY = 'proposalSupported_kdu_hes_v6_final';
