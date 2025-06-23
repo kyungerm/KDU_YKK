@@ -9,7 +9,6 @@
     <!-- Firebase SDK for the "Support" widget -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-check.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -72,12 +71,6 @@
              vertical-align: middle;
              font-size: 0.9rem;
         }
-        .custom-table .category-cell {
-            font-weight: 700;
-            text-align: center;
-            color: var(--color-primary);
-            background-color: #FFF3E0;
-        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -89,11 +82,11 @@
 
         <main>
             <section id="intro" class="section">
-                <h2 class="section-title">왜 지금 보건교육사인가?</h2>
-                <p class="section-subtitle mb-12">학생의 미래, 학과의 경쟁력을 한 단계 높일 최적의 전략</p>
+                <h2 class="section-title">보건복지부 장관 명의로 발급되는 국가자격증, 보건교육사</h2>
+                <p class="section-subtitle mb-12">간호학 전공자의 새로운 미래, 더 넓은 전문성의 시작</p>
                 <div class="max-w-4xl mx-auto text-center text-lg text-gray-700 mb-12 space-y-4">
                     <p>
-                        국민건강증진법에 근거한 '보건교육사'는 임상을 넘어 지역사회, 산업체, 국가기관에서 국민 건강을 책임지는 핵심 전문가입니다.
+                        '보건교육사'는 국가고시를 통해 취득하는 <span class="font-bold">보건복지부 장관 명의로 발급되는 공신력 있는 국가자격증</span>입니다. 임상 현장을 넘어 지역사회, 산업체, 국가기관에서 국민 건강을 책임지는 핵심 전문가로 활동할 수 있는 유망한 경로입니다.
                     </p>
                     <p>
                         전국 수많은 간호학과가 유사과목 심사 절차를 거쳐 이 제도를 운영하며 학생들의 진로를 다각화하고 학과 경쟁력을 강화하고 있습니다. 이제 경동대학교가 이 흐름을 선도할 때입니다.
@@ -159,24 +152,21 @@
                 </div>
             </section>
 
-            <section id="strategy" class="section">
-                <h2 class="section-title">경쟁 대학의 활용 및 홍보 전략</h2>
-                <p class="section-subtitle mb-12">단순 자격 취득을 넘어 학과 브랜드 가치를 높이는 방법,<br>타 대학교는 이렇게 이미 활용하고 있습니다.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="content-card text-center transition hover:shadow-xl hover:-translate-y-1">
-                        <div class="text-5xl mb-4">🎓</div>
-                        <h3 class="text-lg font-bold text-dark mb-2">학과 경쟁력으로 부각</h3>
-                        <p class="text-gray-600 mt-2">'취득 가능 자격증' 목록에 '보건교육사'를 간호사 면허와 함께 명시,<br>다양한 진로 가능성을 제시하여 신입생 유치에 활용합니다.</p>
-                    </div>
-                    <div class="content-card text-center transition hover:shadow-xl hover:-translate-y-1">
-                        <div class="text-5xl mb-4">💼</div>
-                        <h3 class="text-lg font-bold text-dark mb-2">구체적인 진로와 연계</h3>
-                        <p class="text-gray-600 mt-2">'졸업 후 진로'에 보건소, 공공기관, 기업체 등 구체적 활동 무대를 제시하여<br>학생들의 경력 설계와 학습 동기를 자극합니다.</p>
-                    </div>
-                    <div class="content-card text-center transition hover:shadow-xl hover:-translate-y-1">
-                        <div class="text-5xl mb-4">📈</div>
-                        <h3 class="text-lg font-bold text-dark mb-2">적극적 지원 프로그램 운영</h3>
-                        <p class="text-gray-600 mt-2">정규과정 외 별도 특강, 스터디 그룹 지원 등을 통해<br>높은 합격률을 홍보하며 교육의 질적 우수성을 과시합니다.</p>
+            <section id="synergy" class="section">
+                <h2 class="section-title">시험 준비의 시너지, 왜 간호학과 학생이 유리한가?</h2>
+                <p class="section-subtitle mb-12">하나의 공부로, 두 개의 국가자격을 공략하는 전략적 이점</p>
+                 <div class="content-card max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="text-6xl text-primary">🔄</div>
+                        <div class="flex-1">
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                간호학과 학생들은 <span class="font-bold">간호사 국가고시를 준비하는 것만으로도 보건교육사 시험의 상당 부분을 자연스럽게 대비</span>할 수 있습니다. 두 시험의 과목 간 높은 연계성 덕분에, 적은 추가 노력으로 두 개의 국가자격을 동시에 취득하는 '시너지 효과'를 누릴 수 있습니다.
+                            </p>
+                            <p class="mt-4 text-md text-gray-600 bg-gray-50 p-4 rounded-md border">
+                                <span class="font-bold">【핵심 연계 예시】</span><br>
+                                간호사 국시의 핵심 과목인 <span class="font-semibold">'지역사회간호학'</span>은 지역사회 진단, 보건사업 기획 및 평가를 다루므로, 보건교육사 시험의 <span class="font-semibold">'보건학'</span> 및 <span class="font-semibold">'보건사업관리'</span> 과목과 직접적으로 연결됩니다.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -275,34 +265,31 @@
                 <p class="section-subtitle mb-12">우수한 교육과정, 이미 충분한 잠재력을 갖추고 있습니다.</p>
                 <div class="content-card">
                     <h3 class="text-xl font-bold text-center mb-4 text-gray-800">보건교육사 3급 유사과목 심사 신청 제안 목록 (추정)</h3>
-                    <div class="text-sm text-center text-gray-500 mb-6 space-y-2">
-                        <p>타 대학 인정 사례와 본교 교육과정(2019-2025)을 비교 분석한 핵심 교과목 목록입니다.</p>
-                        <p>심사 시, 관련성 있는 모든 과목을 제출하여 인정률을 극대화하는 전략이 필요합니다.</p>
-                    </div>
                     <div class="overflow-x-auto">
                         <table class="w-full custom-table">
-                            <thead>
+                           <thead>
                                 <tr>
-                                    <th>구분</th>
-                                    <th>법정 교과목</th>
-                                    <th>경동대학교 개설 교과목 (제안)</th>
+                                    <th class="w-3/12">법정 교과목 (HES Subject)</th>
+                                    <th class="w-4/12">경동대학교 간호학과 유사과목 (제안)</th>
+                                    <th class="w-5/12">인정 근거 및 타 대학 사례</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td class="category-cell" rowspan="6">필수</td><td>보건학</td><td class="text-left font-medium">지역사회간호학 I, II, III</td></tr>
-                                <tr><td>조사방법론</td><td class="text-left font-medium">간호연구 / 간호연구방법</td></tr>
-                                <tr><td>보건의료법규</td><td class="text-left font-medium">보건의료법규 / 보건의약관계법규</td></tr>
-                                <tr><td>보건의사소통</td><td class="text-left font-medium">인간관계 및 의사소통 / 의사소통론</td></tr>
-                                <tr><td>보건사업관리</td><td class="text-left font-medium">간호관리학 I, II</td></tr>
-                                <tr><td>보건교육실습</td><td class="text-left font-medium">지역사회간호학실습</td></tr>
-                                <tr><td class="category-cell" rowspan="8">선택</td><td>해부생리</td><td class="text-left font-medium">인체구조와 기능 I, II / 기초인체해부학 / 기초인체생리학</td></tr>
-                                <tr><td>인간발달론</td><td class="text-left font-medium">인간성장과 발달</td></tr>
-                                <tr><td>보건통계</td><td class="text-left font-medium">보건통계 / 의료통계</td></tr>
-                                <tr><td>정신보건</td><td class="text-left font-medium">정신건강간호학 I, II / 통합정신간호</td></tr>
-                                <tr><td>아동보건</td><td class="text-left font-medium">아동건강간호학 I, II</td></tr>
-                                <tr><td>노인보건</td><td class="text-left font-medium">노인간호학</td></tr>
-                                <tr><td>보건윤리</td><td class="text-left font-medium">생명윤리</td></tr>
-                                <tr><td>보건정보</td><td class="text-left font-medium">간호정보학</td></tr>
+                                <tr><td>[필수] 보건학</td><td class="text-left font-medium">지역사회간호학 I, II</td><td class="text-left text-sm">지역사회 단위의 건강 문제 사정, 공중보건 원리 등 핵심 내용이 일치합니다. (서울대, 연세대, 광주보건대 등 다수 대학에서 인정)</td></tr>
+                                <tr><td>[필수] 조사방법론</td><td class="text-left font-medium">간호연구방법</td><td class="text-left text-sm">연구 설계, 자료 수집, 통계 분석 등 과학적 탐구 방법론을 다루어 내용적 동일성이 매우 높습니다. (연세대, 서울대, 등 사례)</td></tr>
+                                <tr><td>[필수] 보건의료법규</td><td class="text-left font-medium">보건의료법규</td><td class="text-left text-sm">법정 교과목과 명칭이 일치하며, 의료법 등 보건의료 관련 법규를 다루므로 직접적인 연관성을 가집니다. (광주보건대 등 사례) <span class="font-bold text-red-500">무심사 통과 可</span></td></tr>
+                                <tr><td>[필수] 보건의사소통</td><td class="text-left font-medium">인간관계 및 의사소통 / 인간관계와 자기표현</td><td class="text-left text-sm">환자, 보호자, 동료 의료인과의 치료적 의사소통 기술 및 이론을 다루어 내용이 부합합니다. (서울대, 연세대 등 사례)</td></tr>
+                                <tr><td>[필수] 보건사업관리</td><td class="text-left font-medium">간호관리학 I, II</td><td class="text-left text-sm">간호 단위의 인력, 자원, 예산 관리 및 기획, 통제, 평가 등 보건사업관리의 원리와 내용이 유사합니다. (광주보건대, 서울대 등 사례)</td></tr>
+                                <tr><td>[필수] 보건교육학</td><td class="text-left font-medium">보건교육</td><td class="text-left text-sm">2020학년도 교육과정부터 전공선택 과목으로 개설되어 있어 직접적인 인정 가능성이 매우 높습니다. (광주보건대 등 사례) <span class="font-bold text-red-500">무심사 통과 可</span></td></tr>
+                                <tr><td>[필수] 보건교육실습</td><td class="text-left font-medium">지역사회간호학실습</td><td class="text-left text-sm">지역사회 현장에서 보건교육을 포함한 간호 활동을 수행하므로 실습 내용의 유사성이 높습니다. (서울대, 연세대, 광주보건대 등 사례)</td></tr>
+                                <tr><td>[선택] 해부생리</td><td class="text-left font-medium">인체구조와 기능 I, II</td><td class="text-left text-sm">인체의 구조와 기능에 대한 기초 의학 지식으로, 모든 간호학의 기반이 되어 인정 가능성이 매우 높습니다. (광주보건대 등 사례)</td></tr>
+                                <tr><td>[선택] 인간발달론</td><td class="text-left font-medium">인간성장과 발달(19), 인간의 이해</td><td class="text-left text-sm">생애 주기에 따른 신체적, 인지적, 심리사회적 발달 과정을 다루어 법정 교과목과 목표가 동일합니다. (연세대 등 사례)</td></tr>
+                                <tr><td>[선택] 보건통계</td><td class="text-left font-medium">의료통계</td><td class="text-left text-sm">보건의료 데이터 분석에 필수적인 통계적 방법론을 학습하므로 직접적인 유사과목으로 인정됩니다. (연세대 사례)</td></tr>
+                                <tr><td>[선택] 정신보건</td><td class="text-left font-medium">정신건강간호학 I, II</td><td class="text-left text-sm">정신질환의 예방, 치료, 재활 및 정신건강증진을 다루어 내용이 직접적으로 부합합니다. (광주보건대, 서울대 등 사례)</td></tr>
+                                <tr><td>[선택] 아동보건</td><td class="text-left font-medium">아동건강간호학 I, II</td><td class="text-left text-sm">영유아 및 아동의 성장발달, 질병 예방 및 건강관리를 다루어 내용이 일치합니다. (광주보건대, 서울대 등 사례)</td></tr>
+                                <tr><td>[선택] 노인보건</td><td class="text-left font-medium">노인간호학</td><td class="text-left text-sm">노인의 건강 문제, 만성질환 관리, 건강증진 등을 다루어 내용이 직접적으로 부합합니다. (서울대 사례)</td></tr>
+                                <tr><td>[선택] 보건윤리</td><td class="text-left font-medium">생명윤리</td><td class="text-left text-sm">의료 현장에서의 윤리적 딜레마와 의사결정 과정을 다루어 보건윤리의 핵심 내용과 일치합니다.</td></tr>
+                                <tr><td>[선택] 보건정보</td><td class="text-left font-medium">간호정보학</td><td class="text-left text-sm">보건의료 정보 시스템의 활용 및 관리를 다루어 내용적 유사성이 있습니다. (서울대 사례)</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -407,18 +394,6 @@
                 firebase.initializeApp(firebaseConfig);
             }
             
-            // App Check 활성화 코드 (오류 발생 시에도 앱 중단 방지)
-            try {
-                const appCheck = firebase.appCheck();
-                appCheck.activate(
-                    '6LdJtWkrAAAAAN1KDtphZS61dHv6oDOFrncDv2AZ', // reCAPTCHA v3 site key
-                    true
-                );
-                console.log('Firebase App Check activated successfully.');
-            } catch (error) {
-                console.error('Firebase App Check activation failed. This may be due to domain/key mismatch. The support widget will still attempt to function without App Check.', error);
-            }
-
             const database = firebase.database();
             const supportButton = document.getElementById('support-button');
             const supportCountSpan = document.getElementById('support-count');
